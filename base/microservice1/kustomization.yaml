@@ -1,6 +1,6 @@
 ---
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
+# apiVersion: kustomize.config.k8s.io/v1beta1
+# kind: Kustomization
 commonLabels:
   app: demo-api
 resources:
@@ -9,3 +9,12 @@ resources:
 images:
 - name: kimheang68/demo-api
   newTag: "13"
+
+
+# commonLabels:
+#   app: demo-api
+
+# resources:
+# - deployment.yaml
+# - service.yaml
+# - configMap.yaml
