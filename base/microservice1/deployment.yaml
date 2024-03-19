@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: demo-api
-        
+        image: kimheang68/demo-api:13
         ports:
         - containerPort: 8080
         resources:
