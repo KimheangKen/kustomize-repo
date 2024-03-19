@@ -7,4 +7,14 @@ resources:
   - ../../base/microservice1
 
 patches:
-  - microservice1/deployment.yaml  # Assuming the patch file is named deployment.yaml
+  - patch: | # Indicate this is a patch and use a '|' to preserve newlines
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: demo-api
+      spec:
+        replicas: 3
+    target:
+      kind: Deployment
+      name: demo-api
+      namespace: staging
