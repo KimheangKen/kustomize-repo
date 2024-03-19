@@ -1,9 +1,6 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: demo-api
-  name: demo-api
+  name: demo-api  # Make sure the name matches the base resource you're patching
 spec:
-  replicas: 3
+  replicas: 3  # Customize the number of replicas as per your requirement
